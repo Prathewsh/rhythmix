@@ -27,9 +27,9 @@
 
 ### Web App (Recommended)
 
-Visit: [Rhythmix Player (Vercel)](https://rhythmix-teal.vercel.app/)
+link 1: [Rhythmix Player (Vercel)](https://rhythmix-teal.vercel.app/)
 
-Visit: [Rhythmix Player (Deno)](https://rhythmix.markuply.deno.net/)
+link 2: [Rhythmix Player (Deno)](https://rhythmix.markuply.deno.net/)
 
 No install needed. Works on mobile and desktop browsers.
 
