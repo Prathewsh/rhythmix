@@ -41,7 +41,7 @@ Coming soon / [Download APK](https://rhythmixapk.com)
 
 ## 🧑‍💻 Contributing
 
-Want to help improve FreeTube Music?
+Want to help improve Rhythmix?
 
 1. Fork this repo
 2. Make your changes
