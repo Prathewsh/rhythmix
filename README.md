@@ -23,7 +23,7 @@
 
 ---
 
-## ⚡ What's New:
+## ⚡ What's New in v1.0.0:
 
 ### Features
 
