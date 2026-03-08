@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { YOUTUBE_API_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export async function GET({ url }) {
     const q = url.searchParams.get('q');
@@ -14,11 +14,11 @@ export async function GET({ url }) {
 
     let apiUrl = '';
     if (chart) {
-        apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=${part}&chart=${chart}&maxResults=${maxResults}&regionCode=${regionCode || 'US'}&key=${YOUTUBE_API_KEY}`;
+        apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=${part}&chart=${chart}&maxResults=${maxResults}&regionCode=${regionCode || 'US'}&key=${env.YOUTUBE_API_KEY}`;
     } else if (id) {
-        apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=${part}&id=${id}&key=${YOUTUBE_API_KEY}`;
+        apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=${part}&id=${id}&key=${env.YOUTUBE_API_KEY}`;
     } else {
-        apiUrl = `https://www.googleapis.com/youtube/v3/search?part=${part}&type=${type}&maxResults=${maxResults}&q=${encodeURIComponent(q)}&key=${YOUTUBE_API_KEY}`;
+        apiUrl = `https://www.googleapis.com/youtube/v3/search?part=${part}&type=${type}&maxResults=${maxResults}&q=${encodeURIComponent(q)}&key=${env.YOUTUBE_API_KEY}`;
         if (videoCategoryId) apiUrl += `&videoCategoryId=${videoCategoryId}`;
         if (videoDuration) apiUrl += `&videoDuration=${videoDuration}`;
     }
